@@ -19,8 +19,12 @@ export function configureFakeBackend() {
                         let responseJson = {
                             id: user.id,
                             username: user.username,
-                            firstName: user.firstName,
-                            lastName: user.lastName,
+                            fullName: user.fullName,
+                            idNumber: user.idNumber,
+                            mobileNumber: user.mobileNumber,
+                            emailAddress: user.emailAddress,
+                            profileUrl: user.profileUrl,
+                            userName: user.userName,
                             token: 'fake-jwt-token'
                         };
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
