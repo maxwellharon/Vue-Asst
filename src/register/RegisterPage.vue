@@ -3,34 +3,19 @@
         <h2>Register</h2>
         <form @submit.prevent="handleSubmit">
             <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" v-model="user.firstName" v-validate="'required'" name="fullName" class="form-control" :class="{ 'is-invalid': submitted && errors.has('firstName') }" />
-                <div v-if="submitted && errors.has('fullName')" class="invalid-feedback">{{ errors.first('fullName') }}</div>
+                <label for="firstName">First Name</label>
+                <input type="text" v-model="user.firstName" v-validate="'required'" name="firstName" class="form-control" :class="{ 'is-invalid': submitted && errors.has('firstName') }" />
+                <div v-if="submitted && errors.has('firstName')" class="invalid-feedback">{{ errors.first('firstName') }}</div>
             </div>
             <div class="form-group">
-                <label for="idNo">ID Number</label>
-                <input type="integer" v-model="user.idNumber" v-validate="'required'" name="ID Number" class="form-control" :class="{ 'is-invalid': submitted && errors.has('idNumber') }" />
-                <div v-if="submitted && errors.has('idNumber')" class="invalid-feedback">{{ errors.first('idNumber') }}</div>
-            </div>
-            <div class="form-group">
-                <label for="mobileNumber">Mobile Number</label>
-                <input type="integer" v-model="user.mobileNumber" v-validate="'required'" name="mobileNumber" class="form-control" :class="{ 'is-invalid': submitted && errors.has('mobileNumber') }" />
-                <div v-if="submitted && errors.has('mobileNumber')" class="invalid-feedback">{{ errors.first('mobileNumber') }}</div>
-            </div>
-            <div class="form-group">
-                <label for="emailAddress">Email Address</label>
-                <input type="text" v-model="user.email" v-validate="'required'" name="emailAddress" class="form-control" :class="{ 'is-invalid': submitted && errors.has('emailAddress') }" />
-                <div v-if="submitted && errors.has('emailAddress')" class="invalid-feedback">{{ errors.first('emailAddress') }}</div>
-            </div>
-            <div class="form-group">
-                <label for="profileUrl">Profile Url</label>
-                <input type="text" v-model="user.profileUrl" v-validate="'required'" name="profileUrl" class="form-control" :class="{ 'is-invalid': submitted && errors.has('profileUrl') }" />
-                <div v-if="submitted && errors.has('profileUrl')" class="invalid-feedback">{{ errors.first('profileUrl') }}</div>
+                <label for="lastName">Last Name</label>
+                <input type="text" v-model="user.lastName" v-validate="'required'" name="lastName" class="form-control" :class="{ 'is-invalid': submitted && errors.has('lastName') }" />
+                <div v-if="submitted && errors.has('lastName')" class="invalid-feedback">{{ errors.first('lastName') }}</div>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" v-model="user.userName" v-validate="'required'" name="userName" class="form-control" :class="{ 'is-invalid': submitted && errors.has('userName') }" />
-                <div v-if="submitted && errors.has('userName')" class="invalid-feedback">{{ errors.first('userName') }}</div>
+                <input type="text" v-model="user.username" v-validate="'required'" name="username" class="form-control" :class="{ 'is-invalid': submitted && errors.has('username') }" />
+                <div v-if="submitted && errors.has('username')" class="invalid-feedback">{{ errors.first('username') }}</div>
             </div>
             <div class="form-group">
                 <label htmlFor="password">Password</label>
@@ -53,12 +38,9 @@ export default {
     data () {
         return {
             user: {
-                fullName: '',
-                idNO: '',
-                mobileNumber: '',
-                emailAddress: '',
-                profileUrl: '',
-                userName: '',
+                firstName: '',
+                lastName: '',
+                username: '',
                 password: ''
             },
             submitted: false
