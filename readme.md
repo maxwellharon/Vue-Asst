@@ -32,4 +32,4 @@ For assistance and Queries please email maxwellharon@gmail.com.
 
 ### License
 *MIT 2019*
-Copyright (c) 2018 **Maxwell Haron**
+Copyright (c) 2019 **Maxwell Haron**
